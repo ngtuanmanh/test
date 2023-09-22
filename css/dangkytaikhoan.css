@@ -1,0 +1,60 @@
+body{
+    margin: 0;
+    height: 100vh;
+    background-color: black;
+}
+.form_register{
+    margin: 10px auto;
+    max-width: 600px;
+    /* box-shadow apx, bpx, cpx, color tạo bóng */
+    box-shadow: 0px 0px 5px #282828;
+    /* bo tròn góc: Apx 4 góc chung 1 giá trị, 
+    border-radius: Apx góc trên/trái và góc dưới phải
+     Bpx: góc trên phải và góc dưới/trái
+     : Apx Bpx Cpx; 
+     Apx: góc trên trái
+     Bpx: góc trên phải và dưới/ trái
+     Cpx: góc dưới/ phải
+     Dpx: góc dưới /trái
+     */
+    border-radius: 10px;
+    /* box-sizing: kích thướng phần tử html tính từ content
+    border-box: kích thước phần tử html tính từ border */
+    box-sizing: border-box;
+    padding: 30px;
+    background: rgb(5, 160, 88);
+}
+.content{
+    display: flex;
+    
+}
+#title{
+    margin-top: 0;
+    text-align: center;
+    font-family: arial;
+}
+.row label{
+    display: block;
+    width: 100%;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+.form-control{
+    width: 100%;
+    box-sizing: border-box;
+    height: 33px;
+    border-radius: 5px;
+    /* border: Apx độ dày đường viền 
+    type loại đường solid... */
+    border: 1px solid #cccccc;
+    padding: 5px;
+    border-style: ;
+}
+.form-control:focus{
+    /* đường song song với border và bao ngoài border */
+    outline: unset;
+}
+textarea.form-control{
+    height: auto;
+    min-height: 60px;
+}

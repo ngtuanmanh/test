@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>lab13</title>
+    <link rel="stylesheet" href="./css/dangkytaikhoan.css">
+    <link rel="stylesheet" href=
+    "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"/>
+</head>
+<body>
+    <div class="form_register">
+     <h1 id="title">Đăng ký tài khoản</h1>
+     <form action="" method="post"> 
+<div class="row">
+   <label>Họ tên</label>
+   <input type="text" name="fullname" value="" class="form-control"/>
+</div>
+<div class="row">
+       <label><i class="fa-regular fa-user"></i>Email</label>
+       <input type="email" name="email" value="" class="form-control"/>
+</div>
+<div class="row">
+<label><i class="fa-solid fa-key"></i>Mật khẩu
+  <i class="fa-regular fa-eye" style="float: right;"></i>
+</label>
+<input type="password" name="password" value="" class="form-control"/>
+</div>
+<div class="content">
+   <div class="row">
+    <label>Giới tính</label>
+    <label> 
+        <input type="radio" name="gender" value="1" checked/>Nam
+    </label>
+    <label> 
+        <input type="radio" name="gender" value="2"/>Nữ
+    </label>
+   </div>
+     <div class="row" style="padding-left: 100px;">
+       <label> Subject </label>
+       <!-- dùng checkbox có thể chọn hoặc không chọn nhiều mục khác với
+         radio buộc phải chọn 1 trường giá trị -->
+       <label>
+        <input type="checkbox" name="hobby[]" value="1"/> PHP
+       </label>
+       <label>
+        <input type="checkbox" name="hobby[]" value="2"/> Java Scrip
+       </label>
+       <label>
+        <input type="checkbox" name="hobby[]" value="3"/> Boostrap
+       </label>
+       <label>
+        <input type="checkbox" name="hobby[]" value="4"/> HTML & CSS
+       </label>
+      </div>
+     </div>
+     <!-- nhiều option chọn thẻ seclect và có mặc định chọn có selected 
+    như ví dụ đặt chọn Hà Nội  -->
+    <!-- value là giá trị khi đẩy lên server lưu vào data base -->
+     <div class="row">
+       <label> Quê quán </label>
+       <select name="country" class="form-control">
+        <option value="">Chọn tỉnh thành</option>
+        <option value="HN" selected>Hà Nội</option>
+        <option value="HP">Hải Phòng</option>
+        <option value="QN">Quảng Ninh</option>
+        <option value="HaNam">Hà Nam</option>
+        <option value="NB">Ninh Bình</option>
+       </select>
+     </div>
+     <div class="row">
+       <label>Mô tả</label>
+       <textarea name="desc" class="form-control"></textarea>
+     </div>
+     <div class="row">
+       <label style="background-color: aquamarine;">Avatar</label>
+       <input type="file" name="avatar" accept="image/*">
+     </div>
+     <!-- nút button submit và get khác nhau ở không đẩy data base  -->
+     <div class="row">
+       <button type="submit" style="background-color: aqua;">Đăng ký</button>
+       <button style="padding: 0 10px;"></button>
+       <button type="button" style="background-color: red;">Hủy</button>
+     </div>
+    </form>
+    </div>
+</body>
+<script src="https://code.jquery.com/jquery-3.7.1.js"> </script>
+<script src=".js/app.js"></script>
+</html>
+

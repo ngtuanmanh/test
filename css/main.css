@@ -1,0 +1,164 @@
+body{
+    background-image: url(../images/bgr1.jpg);
+    background-size: cover;
+    /* background-position-y: -100px; */
+}
+.container{
+    max-width: 960px;
+    margin: 0px auto;
+}
+#header{
+    background-color: darkslategray;
+}
+nav{
+    display: flex;
+    justify-content: space-between;
+    justify-items: center;
+    
+}
+#logo{
+    padding: 5px 0px;
+}
+#logo img{
+    max-width: 50px;
+    height: auto;
+}
+#main-menu{
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+#main-menu li a{
+    color: aliceblue;
+    display: block;
+    padding: 18px 20px;
+    text-decoration: none;
+    position: relative;
+}
+#main-menu ul.sub-menu{
+    position: absolute;
+}
+#main-menu ul.sub-menu{
+    position: absolute;
+    background-color: black;
+    padding: 15px 0px;
+    list-style: none;
+    width: 200px;
+    border-bottom: 1px solid #5c5c5c;
+    /* display: none; ẩn menu */
+    display: none;
+  
+}
+#main-menu li:hover>ul.sub-menu{
+      /* ẩn menu con đến khi click chuột vào mới hiện lên khi hover 
+    chuột vào li với display:block*/
+    display: block;
+}
+#main-menu ul.sub-menu a{
+    padding: 8px 15px;
+    border-bottom: 1px solid #434343;
+    left: 0;
+}
+/* đặt dấu > tới a để tác động trực tiếp đến toán tử a */
+#main-menu ul.sub-menu li:hover>a{
+    border-bottom: 1px solid #5c5c5c;
+}
+#main-menu ul.sub-menu li:last-child a{
+    border: none;
+}
+
+#main-menu ul.sub-menu ul.sub-menu{
+    left: 199px;
+    top: 5px;
+}
+#main-menu>li>a{
+    position:relative
+}
+/* thiết lập border khi hover */
+#main-menu>li>a::before{
+      content: "";
+      height: 4px;
+      width: 0px;
+      background: #f00;
+      position: absolute;
+      bottom: 0px;
+      left: 0px;
+      /* đưa vạch đỏ xuống dưới */
+      bottom: 0px;
+      /* ẩn vạch đỏ đi để khi hover vào mới hiện */
+      /* display: none; */
+      transition: 0.25s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+/* #main-menu>li:hover>a::before{
+    display: block;
+} */
+#main-menu>li:hover>a::before{
+    /* để width 100% thì không cần dùng display:none nữa */
+    width: 100%;
+}
+#main-menu .sub-menu li:hover>a{
+    color: #f00;
+}
+#main-menu>li.has-child::after{
+ font-family: "font Awesome 5 free"; 
+ font-weight: 900; 
+ content: "";
+ color: #f5f5f5;
+ position: absolute;   
+ top: 0px;
+ right: 10px;
+ padding: 18px 0px;
+}
+.fa-angle-right{
+    color: #f00;
+    float: right;
+}
+
+a.button{
+    display: inline-block;
+    padding: 8px 36px;
+    background: #f5f5f5;
+    text-decoration: none;
+    border-radius: 20px;
+    transition: all 0.25s ease;
+}
+#wraper{
+    background: #23292d;
+    min-height: 10vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-weight: 400;
+    font-size: 1rem;
+}
+a.button.messenger{
+    background: #0099FF;
+    color: #ffff;
+}
+
+a.button.youtube{
+    background: #cd021f;
+    color: #ffff;
+}
+a.button.register{
+    background: #bceb13;
+    color: #ffff;
+}
+.button-icon{
+    font-size: 20px;
+}
+a.button.messenger:hover{
+    background: #1569a1;
+}
+a.button.youtube:hover{
+    background: #a81e33;
+}
+a.button.register:hover{
+    background: #a38f92;
+}
+a.button.login:hover{
+    background: #968891f6;
+}
+
